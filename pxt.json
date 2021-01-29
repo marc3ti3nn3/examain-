@@ -5,7 +5,8 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "pxt-robotcar": "github:veilkrand/pxt-robotcar#v0.0.14"
+        "pxt-robotcar": "github:veilkrand/pxt-robotcar#v0.0.14",
+        "pxt-k-bit": "github:mworkfun/pxt-k-bit#e8e1f6540764c5c9939877e8d562ba1e4a93088d"
     },
     "files": [
         "main.blocks",
