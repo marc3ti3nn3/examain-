@@ -89,3 +89,13 @@ if (input.temperature() < 15) {
 }
 basic.pause(2000)
 basic.clearScreen()
+RobotCar_Keyestudio.Motors.move(50)
+basic.pause(200)
+RobotCar_Keyestudio.Motors.stop()
+basic.pause(500)
+RobotCar_Keyestudio.Motors.spin(100)
+RobotCar_Keyestudio.Motors.stop()
+basic.pause(500)
+RobotCar_Keyestudio.Motors.move(50)
+basic.pause(200)
+RobotCar_Keyestudio.Motors.stop()
