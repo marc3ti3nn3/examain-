@@ -113,4 +113,5 @@ for (let index = 0; index < 27; index++) {
     RobotCar_Keyestudio.Leds.showRed()
     basic.pause(100)
 }
+music.stopAllSounds()
 RobotCar_Keyestudio.Leds.ledsOff()
