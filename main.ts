@@ -1,4 +1,3 @@
-let strip: neopixel.Strip = null
 for (let index = 0; index < 4; index++) {
     RobotCar_Keyestudio.Leds.showRed()
     basic.pause(500)
@@ -90,17 +89,3 @@ if (input.temperature() < 15) {
 }
 basic.pause(2000)
 basic.clearScreen()
-basic.forever(function () {
-    strip = neopixel.create(DigitalPin.P5, 18, NeoPixelMode.RGB)
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
-    basic.pause(1000)
-    strip.showColor(neopixel.colors(NeoPixelColors.Orange))
-    basic.pause(1000)
-    strip.showColor(neopixel.colors(NeoPixelColors.Green))
-    basic.pause(1000)
-    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
-    basic.pause(1000)
-    strip.showColor(neopixel.colors(NeoPixelColors.Violet))
-    basic.pause(1000)
-    strip.showColor(neopixel.colors(NeoPixelColors.White))
-})
