@@ -28,12 +28,6 @@ for (let index = 0; index < 1; index++) {
     RobotCar_Keyestudio.Motors.stop()
 }
 music.stopAllSounds()
-for (let index = 0; index < 4; index++) {
-    basic.pause(1000)
-    RobotCar_Keyestudio.Motors.steer(50, 50)
-    RobotCar_Keyestudio.Motors.stop()
-    basic.pause(200)
-}
 for (let index = 0; index < 5; index++) {
     RobotCar_Keyestudio.Leds.showRed()
     music.playTone(494, music.beat(BeatFraction.Half))
@@ -44,6 +38,14 @@ for (let index = 0; index < 5; index++) {
 }
 RobotCar_Keyestudio.Leds.ledsOff()
 music.stopAllSounds()
+for (let index = 0; index < 4; index++) {
+    RobotCar_Keyestudio.Motors.spin(50)
+    basic.pause(750)
+    RobotCar_Keyestudio.Motors.steer(50, 0)
+    basic.pause(500)
+    RobotCar_Keyestudio.Motors.stop()
+    basic.pause(200)
+}
 for (let index = 0; index < 3; index++) {
     if (randint(1, 3) == 1) {
         basic.showLeds(`
@@ -90,12 +92,25 @@ if (input.temperature() < 15) {
 basic.pause(2000)
 basic.clearScreen()
 RobotCar_Keyestudio.Motors.move(50)
-basic.pause(200)
+basic.pause(500)
 RobotCar_Keyestudio.Motors.stop()
 basic.pause(500)
-RobotCar_Keyestudio.Motors.spin(100)
+RobotCar_Keyestudio.Motors.spin(81)
+basic.pause(1000)
 RobotCar_Keyestudio.Motors.stop()
 basic.pause(500)
 RobotCar_Keyestudio.Motors.move(50)
-basic.pause(200)
+basic.pause(500)
 RobotCar_Keyestudio.Motors.stop()
+music.startMelody(music.builtInMelody(Melodies.Blues), MelodyOptions.Once)
+for (let index = 0; index < 27; index++) {
+    RobotCar_Keyestudio.Leds.showWhite()
+    basic.pause(100)
+    RobotCar_Keyestudio.Leds.showBlue()
+    basic.pause(100)
+    RobotCar_Keyestudio.Leds.showGreen()
+    basic.pause(100)
+    RobotCar_Keyestudio.Leds.showRed()
+    basic.pause(100)
+}
+RobotCar_Keyestudio.Leds.ledsOff()
